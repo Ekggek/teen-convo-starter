@@ -1,77 +1,74 @@
-/* Apply Figtree as the primary font */
+/* Import Figtree font */
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;600;700&display=swap');
+
+/* Global Styling */
 body {
     font-family: 'Figtree', sans-serif;
     text-align: center;
     background-color: #f4f4f4;
     padding: 20px;
+    margin: 0;
 }
 
+/* Main Container */
 .container {
     max-width: 600px;
     margin: auto;
     padding: 20px;
     background: white;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Headline (Increased Size) */
 h1 {
-    font-size: 30px;
+    font-size: 40px; /* Bigger size */
     font-weight: 700;
     margin-bottom: 10px;
     color: #333;
 }
 
+/* Tagline (Increased Size) */
 .tagline {
-    font-size: 16px;
+    font-size: 24px; /* Bigger size */
     color: #555;
     font-style: italic;
     margin-bottom: 20px;
 }
 
+/* Label */
 label {
     font-size: 18px;
     font-weight: 600;
     margin-right: 10px;
 }
 
+/* Dropdown Menu */
 select {
     font-size: 16px;
-    padding: 5px;
+    padding: 8px;
     margin-bottom: 20px;
     border-radius: 5px;
     border: 1px solid #ccc;
+    background: #fff;
+    cursor: pointer;
+    transition: border 0.3s;
 }
 
-/* Updated styling for the question box */
+select:hover {
+    border-color: #007bff;
+}
+
+/* Question Box */
 #question-box {
     background: #eef;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 25px;
+    border-radius: 12px;
     margin-top: 15px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
 }
 
+/* Question Text */
 #question {
-    font-size: 28px; /* Increased font size */
-    font-weight: 600;
-    margin: 20px 0;
-    color: #333;
-}
-
-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    font-size: 18px;
-    font-weight: 600;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 10px;
-    transition: background 0.3s;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
+    font-size: 30px; /* Increased font size for better readability */
+ 
