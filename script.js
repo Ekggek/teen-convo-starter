@@ -6,14 +6,14 @@ const questions = {
         "If you could swap lives with a character from a movie, who would it be?",
         "What's the weirdest food combination you've ever tried?"
     ],
-    selfReflection: [
+    "self-reflection": [
         "What’s a belief you’ve questioned recently?",
         "What’s one thing you wish adults understood about your generation?",
         "How do you define success for yourself?",
         "If you could ask your future self one question, what would it be?",
         "What’s something you’ve changed your mind about in the past year?"
     ],
-    bigQuestions: [
+    "big-questions": [
         "What’s a popular opinion that you completely disagree with?",
         "How do you know if a piece of news is trustworthy?",
         "What’s an example of something that people blindly follow?",
@@ -46,14 +46,14 @@ const questions = {
         "What’s a weird or funny thing you’ve seen online recently?",
         "If you could have dinner with any three fictional characters, who would you choose?"
     ],
-    surprise: [] // Will populate dynamically
+    surprise: [] // Populating dynamically below
 };
 
 // Populate "Surprise Me!" category with all questions combined
 questions.surprise = [
     ...questions.fun,
-    ...questions.selfReflection,
-    ...questions.bigQuestions,
+    ...questions["self-reflection"],
+    ...questions["big-questions"],
     ...questions.life,
     ...questions.daily,
     ...questions.creativity
