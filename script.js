@@ -6,28 +6,28 @@ const questions = {
         "If you could swap lives with a character from a movie, who would it be?",
         "What's the weirdest food combination you've ever tried?"
     ],
-    selfReflection: [
+    self_reflection: [
         "What’s a belief you’ve questioned recently?",
         "What’s one thing you wish adults understood about your generation?",
         "How do you define success for yourself?",
         "If you could ask your future self one question, what would it be?",
         "What’s something you’ve changed your mind about in the past year?"
     ],
-    bigQuestions: [
+    big_questions: [
         "What’s a popular opinion that you completely disagree with?",
         "How do you know if a piece of news is trustworthy?",
         "What’s an example of something that people blindly follow?",
         "Why do you think people believe conspiracy theories?",
         "If you had to create a 'BS detector' for spotting fake news, what would you include?"
     ],
-    lifeSkills: [
+    life_skills: [
         "What’s one practical skill you think all teens should learn?",
         "How do you handle stress when things feel overwhelming?",
         "What’s a financial tip you think young people should know?",
         "What’s the best advice you’ve ever received?",
         "If you could teach a class on any life skill, what would it be?"
     ],
-    dailyReflections: [
+    daily_reflections: [
         "What was the best part of your day today?",
         "Did anything surprise you today?",
         "What’s something you laughed about today?",
@@ -47,18 +47,22 @@ const questions = {
 // Populate "Surprise Me!" category
 questions.surprise = [
     ...questions.fun,
-    ...questions.selfReflection,
-    ...questions.bigQuestions,
-    ...questions.lifeSkills,
-    ...questions.dailyReflections,
+    ...questions.self_reflection,
+    ...questions.big_questions,
+    ...questions.life_skills,
+    ...questions.daily_reflections,
     ...questions.creativity
 ];
 
 function showRandomQuestion() {
     const category = document.getElementById("category").value;
+    if (!questions[category]) {
+        document.getElementById("question").textContent = "Please select a valid category.";
+        return;
+    }
     const randomIndex = Math.floor(Math.random() * questions[category].length);
     document.getElementById("question").textContent = questions[category][randomIndex];
 }
 
-// Show a question from the default category when the page loads
+// Load a random question on page load
 window.onload = showRandomQuestion;
