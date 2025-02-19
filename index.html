@@ -10,10 +10,10 @@
 <body>
     <div class="container">
         <h1>FamilySparx</h1>
-        <p class="tagline">Sparking conversations, <br>one question at a time!</p>
+        <p class="tagline">Sparking Conversations, One Question at a Time!</p>
         
         <label for="category">Choose a category:</label>
-        <select id="category" onchange="showRandomQuestion()">
+        <select id="category">
             <option value="fun">Fun</option>
             <option value="self_reflection">Self-Reflection</option>
             <option value="big_questions">Big Questions</option>
@@ -28,6 +28,14 @@
         </div>
 
         <button onclick="showRandomQuestion()">New Question</button>
+        <button onclick="saveFavoriteQuestion()">⭐ Save to Favorites</button>
+        <button onclick="viewFavorites()">📜 View Favorites</button>
+        <button onclick="clearFavorites()">🗑 Clear Favorites</button>
+
+        <div id="favorites-box" style="display: none;">
+            <h2>Saved Questions</h2>
+            <ul id="favorites-list"></ul>
+        </div>
     </div>
 
     <script src="script.js"></script>
