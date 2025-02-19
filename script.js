@@ -6,28 +6,28 @@ const questions = {
         "If you could swap lives with a character from a movie, who would it be?",
         "What's the weirdest food combination you've ever tried?"
     ],
-    "self_reflection": [
+    "self-reflection": [
         "What’s a belief you’ve questioned recently?",
         "What’s one thing you wish adults understood about your generation?",
         "How do you define success for yourself?",
         "If you could ask your future self one question, what would it be?",
         "What’s something you’ve changed your mind about in the past year?"
     ],
-    "big_questions": [
+    "big-questions": [
         "What’s a popular opinion that you completely disagree with?",
         "How do you know if a piece of news is trustworthy?",
         "What’s an example of something that people blindly follow?",
         "Why do you think people believe conspiracy theories?",
         "If you had to create a 'BS detector' for spotting fake news, what would you include?"
     ],
-    life: [
+    "life-skills": [
         "What’s one practical skill you think all teens should learn?",
         "How do you handle stress when things feel overwhelming?",
         "What’s a financial tip you think young people should know?",
         "What’s the best advice you’ve ever received?",
         "If you could teach a class on any life skill, what would it be?"
     ],
-    daily: [
+    "daily-reflections": [
         "What was the best part of your day today?",
         "Did anything surprise you today?",
         "What’s something you laughed about today?",
@@ -46,7 +46,7 @@ const questions = {
         "What’s a weird or funny thing you’ve seen online recently?",
         "If you could have dinner with any three fictional characters, who would you choose?"
     ],
-    surprise: [] // Populating dynamically below
+    surprise: [] // Populating dynamically
 };
 
 // Populate "Surprise Me!" category with all questions combined
@@ -54,8 +54,8 @@ questions.surprise = [
     ...questions.fun,
     ...questions["self-reflection"],
     ...questions["big-questions"],
-    ...questions.life,
-    ...questions.daily,
+    ...questions["life-skills"],
+    ...questions["daily-reflections"],
     ...questions.creativity
 ];
 
