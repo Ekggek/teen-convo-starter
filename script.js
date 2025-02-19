@@ -67,11 +67,42 @@ const questions = {
         "What’s one thing you think future employers will care about most?",
         "What’s something about adulthood that seems confusing to you?"
     ],
-    surprise: [] // This will be filled dynamically
+    daily: [
+        "What was the best part of your day today?",
+        "Did anything surprise you today?",
+        "What’s something you laughed about today?",
+        "What’s something you did today that you’re proud of?",
+        "If you could redo one part of your day, what would it be?",
+        "What’s something that’s been on your mind lately?",
+        "If you had to describe your mood as a weather forecast, what would it be?",
+        "What’s been stressing you out the most this week?",
+        "What’s one thing I can do to support you right now?",
+        "Do you feel like you’re balancing everything okay, or is anything feeling overwhelming?"
+    ],
+    creativity: [
+        "If you could swap lives with anyone for a day, who would it be and why?",
+        "If your life were a movie, what would the title be?",
+        "If you had a theme song that played whenever you entered a room, what would it be?",
+        "What’s a weird or funny thing you’ve seen online recently?",
+        "If you could have dinner with any three fictional characters, who would you choose?",
+        "What’s a game, app, or trend that you think is really cool right now?",
+        "If you could design your dream weekend, what would you do?",
+        "What’s something you and your friends talk about a lot?",
+        "What’s one thing in pop culture that you don’t get the hype about?",
+        "If you could change one school rule, what would it be?"
+    ],
+    surprise: [] // Will populate dynamically
 };
 
 // Populate "Surprise Me!" category with all questions combined
-questions.surprise = [...questions.fun, ...questions.deep, ...questions.thought, ...questions.life];
+questions.surprise = [
+    ...questions.fun,
+    ...questions.deep,
+    ...questions.thought,
+    ...questions.life,
+    ...questions.daily,
+    ...questions.creativity
+];
 
 function showRandomQuestion() {
     const category = document.getElementById("category").value;
