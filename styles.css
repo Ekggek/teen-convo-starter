@@ -22,7 +22,7 @@ body {
 
 /* Headline (Increased Size) */
 h1 {
-    font-size: 42px; /* Bigger size */
+    font-size: 42px;
     font-weight: 700;
     margin-bottom: 10px;
     color: #333;
@@ -30,7 +30,7 @@ h1 {
 
 /* Tagline (Increased Size) */
 .tagline {
-    font-size: 24px; /* Bigger size */
+    font-size: 24px;
     color: #555;
     font-style: italic;
     margin-bottom: 20px;
@@ -70,7 +70,7 @@ select:hover {
 
 /* Question Text */
 #question {
-    font-size: 30px; /* Increased font size for better readability */
+    font-size: 30px;
     font-weight: 600;
     margin: 20px 0;
     color: #222;
@@ -104,11 +104,11 @@ button:hover {
     }
 
     h1 {
-        font-size: 38px; /* Adjusted for mobile */
+        font-size: 38px;
     }
 
     .tagline {
-        font-size: 22px; /* Adjusted for mobile */
+        font-size: 22px;
     }
 
     #question {
