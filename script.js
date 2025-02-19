@@ -32,12 +32,7 @@ const questions = {
         "Did anything surprise you today?",
         "What’s something you laughed about today?",
         "What’s something you did today that you’re proud of?",
-        "If you could redo one part of your day, what would it be?",
-        "What’s something that’s been on your mind lately?",
-        "If you had to describe your mood as a weather forecast, what would it be?",
-        "What’s been stressing you out the most this week?",
-        "What’s one thing I can do to support you right now?",
-        "Do you feel like you’re balancing everything okay, or is anything feeling overwhelming?"
+        "If you could redo one part of your day, what would it be?"
     ],
     creativity: [
         "If you could swap lives with anyone for a day, who would it be and why?",
@@ -61,12 +56,6 @@ questions.surprise = [
 
 function showRandomQuestion() {
     const category = document.getElementById("category").value;
-
-    if (!questions[category]) {
-        document.getElementById("question").textContent = "Please select a valid category.";
-        return;
-    }
-
     const randomIndex = Math.floor(Math.random() * questions[category].length);
     document.getElementById("question").textContent = questions[category][randomIndex];
 }
